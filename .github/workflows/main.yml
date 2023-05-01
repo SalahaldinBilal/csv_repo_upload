@@ -35,5 +35,5 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: us-east-2
-          function_name: dev-writingToDBs
+          function_name: csv_repo_upload
           zip_file: dist/bundle.zip
