@@ -22,7 +22,7 @@ const test = async () => {
     multiValueQueryStringParameters: null
   }
 
-  const response = await handler(testData);
+  const response = await handler(testData, undefined as any, undefined as any);
   console.log(response)
   process.exit(1)
 }
