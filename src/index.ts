@@ -14,7 +14,14 @@ export const handler = async (event: APIGatewayEvent) => {
     }
   }
 
-  await uploadFileToS3(csvFileToUpload);
+  try {
+    await uploadFileToS3(csvFileToUpload);
+  } catch (error) {
+    return {
+      statusCode: 500,
+      message: `Unexpected Error Happened: ${error}`
+    }
+  }
 
   return {
     statusCode: 200,
