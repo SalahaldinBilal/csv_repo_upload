@@ -13,7 +13,7 @@ const client = new S3Client({
 
 export async function uploadFileToS3(data: CsvFile) {
   const filename = data.match(/filename="([^"]+)"/i)![1];
-  const fixedData = data.split('\n').slice(4).join('\n').replace(/-*WebKitFormBoundary[a-zA-z0-9]*--/gm, "");
+  const fixedData = data.split('\n').slice(4).join('\n').replace(/-*WebKitFormBoundary[a-zA-z0-9]*--/gm, "").trim();
 
   const command = new PutObjectCommand({
     Bucket: process.env.BUCKET_NAME,
