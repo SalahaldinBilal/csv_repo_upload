@@ -8,7 +8,9 @@ const test = async () => {
     Content-Type: text/csv
        
     hello,world
-    1,2`,
+    1,2
+    ------WebKitFormBoundaryagIjqa1irQDt3b48--
+    `,
     isBase64Encoded: false,
     headers: {},
     httpMethod: "POST",
